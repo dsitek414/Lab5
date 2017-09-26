@@ -14,7 +14,7 @@ public class PalindromeReader
     	{
     		File inputFile = new File("Palindrome.dat");
     		Scanner input = new Scanner(inputFile);
-    		phrase = input.nextLine().toLowerCase();
+    		phrase = input.nextLine().toLowerCase(); // make lowercase because that doesn't matter
     		input.close();
     	} 
     	catch (IOException e) 
@@ -32,8 +32,8 @@ public class PalindromeReader
 		else if(phrase.charAt(phrase.length()-1) == phrase.charAt(0) && phrase.length() != (1 | 2))
 		{
 			phrase = phrase.substring(1, phrase.length()-1);
-			System.out.println(phrase);
-			System.out.println(phrase.length());
+			//System.out.println(phrase);
+			//System.out.println(phrase.length());
 			reader.isaPalindrome(phrase);
 		}
 		else if(phrase.charAt(phrase.length()-1) != phrase.charAt(0))
